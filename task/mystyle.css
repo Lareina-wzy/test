@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #68CDD5;
+}
+.clear{clear: both;}
+.container{
+    border: 3px solid transparent;
+}
+.arrow{
+    width: 27px;
+    height: 27px;
+    margin: 17px;
+    /* float: left; */
+    /* padding: 17px; */
+    background: url(./images/arrow.png) 
+    center center /100% 100%
+    no-repeat;
+}
+.logo{
+    position: absolute;
+    top:116px;
+    left: calc(50% - 50px);
+    width: 90px;
+    height: 35px;
+    background: url(./images/logo.png) 
+    center center /100% 100%
+    no-repeat;
+}
+
+.txt{
+    margin:153px 15% 0 15%;
+    color:white;
+    line-height:180%;
+    text-align:justify;
+}
+.login{
+    position: relative;
+    border-radius: 50%;
+    width: 42px;height: 42px;
+    background: #3EA7EA url(./images/login.png) center center/100% 100% no-repeat;
+    float: left;
+    margin:15%;
+}
+.login-txt{
+    color: white;
+    position: absolute;
+    left: -30%;top: 53px;
+}
+.ppteng{
+    position: relative;
+    border-radius: 50%;
+    width: 42px;height: 42px;
+    background: #009E96 url(./images/ppteng.png) center center/100% auto;
+    float: right;
+    margin:15% ;
+
+}
+.ppteng-txt{
+    color: white;
+    position: absolute;
+    left: -20%;top: 53px;
+}
