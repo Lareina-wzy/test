@@ -20,10 +20,10 @@ body{
 .logo{
     position: absolute;
     top:116px;
-    left: calc(50% - 45px);
+    left: calc(50% - 50px);
     width: 90px;
     height: 35px;
-    background: url(./images/LOGO.png) 
+    background: url(./images/logo.png) 
     center center /100% 100%
     no-repeat;
 }
@@ -32,9 +32,9 @@ body{
     margin:153px 15% 0 15%;
     color:white;
     line-height:180%;
-    text-align:left;
+    text-align:justify;
 }
-.circle01{
+.login{
     position: relative;
     border-radius: 50%;
     width: 42px;height: 42px;
@@ -47,7 +47,7 @@ body{
     position: absolute;
     left: -30%;top: 53px;
 }
-.circle02{
+.ppteng{
     position: relative;
     border-radius: 50%;
     width: 42px;height: 42px;
