@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: ;
+}
+.header{
+    background: #5FC0CD url(./images/arrow.png) 15px center/9px 16px no-repeat;
+    line-height: 39px;
+    text-align: center;
+    color: white;
+}
+.background{
+    width: 100%;
+    height: 145px;
+    background: url(./images/background.png) center center/100% auto no-repeat;
+}
+.photo{
+    position: absolute;
+    top:74px;
+    left: 13px;
+    background: url(./images/photo.png) center center/75px 75px no-repeat;
+    width: 75px;
+    height: 75px;
+}
+.txt{
+    color: white;
+    padding: 52px 0 0 106px;
+
+}
+.name{
+    line-height: 16px;
+}
+.year{
+    font-size: 12px;
+    line-height: 16px;
+}
+.location{
+    background: url(./images/locationblue.png) left center/8px 10px no-repeat;
+    font-size: 11px;
+    padding-left: 12px;
+    margin-top: 7px;
+}
+.container{
+    position: relative;
+}
+.blueline{
+    background: #5FC0CD;
+    width: 1.5px;
+    height: 12px;
+    position: absolute;
+    top:16px;
+    left: 13px;
+}
+.skill{
+    font-size: 14px;
+    color: #333333;
+    border-bottom:1px solid #E1E5E7;
+    padding-left: 26px;
+    line-height: 44px;
+}
+.box{
+    margin: 0 15px;
+    border-bottom:1px solid #E1E5E7;
+    position: relative;
+}
+.boxtxt{
+    background: url(./images/star.png) 12px center/10px 10px no-repeat;
+    line-height: 44px;
+    padding-left:27px;
+    font-size: 14px;
+    color: #333333;
+}
+.line{
+    background: #E1E5E7;
+    width: 1px;
+    height: 12px;
+    position: absolute;
+    top:16px;
+    left: 63px;
+}
+.line2{
+    background: #E1E5E7;
+    width: 1px;
+    height: 12px;
+    position: absolute;
+    top:16px;
+    left: 80px;
+}
+.txtleft{
+    color: #999999;
+    font-size: 14px;
+    padding-left: 12px;
+    line-height: 44px;
+}
+.txtright{
+    color: #333333;
+    position: absolute;
+    font-size: 14px;
+    left: 96px;
+    line-height: 44px; 
+}
+.txtright2{
+    color: #E26163;
+    font-size: 14px;
+    position: absolute;
+    left: 96px;
+    line-height: 44px; 
+}
+.box3{
+    margin: 0 15px;
+    border-bottom:1px solid #E1E5E7;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+.line3{
+    background: #E1E5E7;
+    width: 1px;
+    height: 12px;
+    position: absolute;
+    left: 95px;
+}
+.txtleft3{
+    position: absolute;
+    color: #999999;
+    font-size: 14px;
+    padding-left: 12px;
+}
+.txtright3{
+    color: #333333;
+    font-size: 13px;
+    margin-left:96px;
+    padding:4px 0;
+    width: calc(100% - 107px);
+    text-align: justify;
+}
+.button{
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+}
+.message{
+    width:calc(50% - 21px);
+    height: 39px;
+    margin-left: 16px;
+    border: #5FC0CD solid 1px;
+    border-radius: 5px;
+    background: white;
+    outline: none;
+    color: #5FC0CD;
+}
+.phone{
+    width: calc(50% - 21px);
+    height: 39px;
+    float: right;
+    margin-right: 16px;
+    border: #5FC0CD solid 1px;
+    border-radius: 5px;
+    background: #5FC0CD;
+    outline: none;
+    color: white;
+}
+.empty{
+    height: 100px;
+}
