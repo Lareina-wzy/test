@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+button{
+    outline: none;
+    background: url(./images/sprites.png) no-repeat;
+    border: none;
+}
+.header{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #5FC0CD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.map{
+    width: 19px;
+    height: 19px;
+    background-position: 0 0;
+    border: 0;
+    position: absolute;
+    right: 10px;
+}
+.master,.work{
+    background: #55A8B3;
+    width: 64px;
+    height: 32px;
+    color: white;
+}
+.master{
+    border-radius: 5px 0 0 5px;
+}
+.work{
+    border-radius: 0 5px 5px 0;
+}
+.master:hover,.work:hover{
+    background: white;
+    color: #5FC0CD;
+    border-radius: 5px;
+}
+.main{
+    width: 100%;
+    position: fixed;
+    top: 40px;
+    bottom: 44px;
+    overflow: auto;;
+}
+.menu{
+    width: 100%;
+    height: 36px;
+    border-bottom: #F1F3F4 solid 1px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #999999;
+}
+.place,.food,.peace{
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    border-right: #E1E5E7 solid 1px;
+}
+.peace{
+    border: none;
+}
+.placeul,.foodul,.peaceul{
+    display: none;
+    width: calc(100% / 3);
+    top: 37px;
+    left: 0;
+    text-align: center;
+    line-height: 35px;
+    background: white;
+    font-size: 13px;
+}
+.placeul{
+    position: absolute;
+    top: 37px;
+    left: 0;
+}
+.foodul{
+    position: absolute;
+    top: 37px;
+    left: calc(100% / 3);
+}
+.peaceul{
+    position: absolute;
+    top: 37px;
+    left: calc(200% / 3);
+    z-index: 999;
+}
+.placeulborder{
+    border: #E1E5E7 solid 1px;
+    border-style: none solid solid none;
+}
+.foodulborder{
+    border: #E1E5E7 solid 1px;
+    border-style: none solid solid solid;
+}
+.peaceulborder{
+    border: #E1E5E7 solid 1px;
+    border-style: none none solid solid;
+}
+.place:hover .placeul{
+    display: block;
+}
+.food:hover .foodul{
+    display: block;
+}
+.peace:hover .peaceul{
+    display: block;
+}
+.line,.line2,.line3{
+    border: solid;
+    border-width: 3px;
+    border-color: #AFBAC0 transparent transparent transparent;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:17px;
+}
+.line{
+    right: calc(200% / 3 + 10px);
+}
+.line2{
+    right: calc(100% / 3 + 10px);
+}
+.line3{
+    right: 10px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: #F1F3F4 solid 1px;
+}
+.group{
+    width: calc(100% - 130px);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.txt{
+    width: 100%;
+    margin-left: 5px;
+}
+.date{
+    color: #999999;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+.time{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333333;
+    font-size: 12px;
+    margin-left: 25px;
+}
+.location{
+    color: #999999;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+}
+.redtime{
+    color: #E63B0E;
+    font-size: 13px;
+    line-height: 13px;
+    position: absolute;
+    right: 30px;
+}
+.icon{
+    background: url(./images/sprites.png) no-repeat;
+    display: inline-block;
+    margin: 0 7px;
+}
+.calendar{
+    width: 11px;
+    height: 11px;
+    background-position: -30px 0;
+}
+.mapicon{
+    width: 11px;
+    height: 10px;
+    background-position: -60px 0;
+}
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 44px;
+    line-height: 44px;
+    background: #F8FAFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homediv{
+    font-size: 9px;
+    line-height: 12px;
+    text-align: center;
+    color: #5FC0CD ;
+}
+button.home{
+    width: 21px;
+    height: 18px;
+    background-position: 0 -30px;
+}
+.write{
+    background: #5FC0CD url(./images/write.png) center center/18px 18px no-repeat;
+    border: #5FC0CD solid 2px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 15%;
+}
+.userdiv{
+    font-size: 9px;
+    line-height: 12px;
+    text-align: center;
+    color: #999999 ;
+}
+.user{
+    background-position: 0 -60px;
+    width: 19px;
+    height: 18px;
+}
