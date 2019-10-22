@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #29BDE0;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px;
+    border-bottom: rgba(255, 255, 255, .35) solid 1px;
+    line-height: 44px;
+    font-size: 17px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+}
+.home {
+    margin-left: 12px;
+    width: 20px;
+    height: 20px;
+    border: white solid 1px;
+}
+.line {
+    margin-left: 2px;
+    margin-top: 3.5px;
+    width: 16px;
+    height: 2px;
+    background: white;
+}
+.warn {
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    margin-right: 10px;
+    line-height: 0;
+    font-size: 0;
+    vertical-align: middle;
+    transform: rotate(45deg);
+    background: #FFFFFF;
+}
+
+.warn:after {
+    content: "/";
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #FFFFFF;
+    transform: rotate(-90deg);
+}
+.main {
+    position: absolute;
+    top: 44px;
+    bottom: 95px;
+    width: 100%;
+    overflow: auto;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #464646;
+    background: rgba(255, 255, 255, .67);
+}
+.titletxt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 25px;
+}
+.video {
+    outline: none;
+    position: relative;
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #FBB435;
+}
+audio {
+    position: absolute;
+    right: -150px;
+    top: 117px;
+    transform: rotate(90deg);
+    opacity: .0;
+}
+.square {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-left: 14px solid #FFFFFF;
+}
+.square02 {
+    width: 0;
+    height: 0;
+    margin-left: 25px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 7px solid #b8e9f5;
+    border-radius: 1px;
+}
+.titletxt02 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 36px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.threegroup{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    border: #FFFFFF solid 2px;
+    margin: 4% 4% 6% 4%;
+    background: #F5C97B;
+}
+.group-top {
+    width: 100%;
+    height: 80%;
+    font-size: 15px;
+    text-align: center;
+    color: #565656;
+}
+.group-down {
+    position: absolute;
+    bottom: 0;
+    padding-top: calc(10% - 6px);
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: rgba(26, 153, 183, .52);
+}
+.group-choose {
+    display: flex;
+    display: none;
+    position: absolute;
+    top: 110%;
+    width: calc( 100% + 4px);
+}
+.group-square {
+    width: 23%;
+    padding-top: 23%;
+    border: none;
+    margin-right: 2%;
+    background: #FFFFFF url(./images/sprites2.png) no-repeat;
+}
+.group-choose01 {
+    background: #FFFFFF url(./images/sprites2.png) 0 0/200% 200%;
+}
+.group-choose02 {
+    background: #FFFFFF url(./images/sprites2.png) -100% 0/200% 200%;
+}
+.group-choose03 {
+    background: #FFFFFF url(./images/sprites2.png) 0 -100%/200% 200%;
+}
+.group-choose04 {
+    background: #FFFFFF url(./images/sprites2.png) -100% -100%/200% 200%;
+}
+.group:hover .group-choose {
+    display: flex;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    border-top: #FFFFFF solid 1px;
+    width: 100%;
+    height: 95px;
+    background: #29BDE0;
+}
+a {
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+button {
+    outline: none;
+    border: none;
+    width: 75%;
+    height: 43px;
+    border-radius: 5%;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #FBB435;
+}
