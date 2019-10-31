@@ -1,0 +1,373 @@
+html body {
+    background-color: #fafafa;
+}
+
+/* 顶部客服热线 */
+.oneline {
+    color: #29B078;
+    line-height: 40px;
+}
+
+.onelinep {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+}
+
+.row-picture01 {
+    width: 23px;
+    height: 23px;
+    border: #29B078 solid 1px;
+    border-radius: 50%;
+    background: url(./images/sprites.png) 0 0 no-repeat;
+}
+
+.row-picture02 {
+    width: 23px;
+    height: 23px;
+    border: #29B078 solid 1px;
+    border-radius: 50%;
+    margin-left: 20px;
+    background: url(./images/sprites.png) -50px 0 no-repeat;
+}
+
+.row-picture03 {
+    width: 23px;
+    height: 23px;
+    border: #29B078 solid 1px;
+    border-radius: 50%;
+    margin-left: 20px;
+    background: url(./images/sprites.png) -100px 0 no-repeat;
+}
+
+/* 导航栏 */
+.two {
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    width: 100%;
+    color: white;
+    background: #29B078;
+    overflow: auto;
+}
+
+.navbar-expand-md {
+    min-height: 100px;
+    background: url(./images/home-logo.png) 15px 30px/auto 40px no-repeat;
+}
+
+.navbar-toggler {
+    float: right;
+    margin-top: 30px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav {
+        height: auto;
+    }
+
+    .navbar-collapse {
+        width: calc(100% - 56px);
+        margin: 80px 0 0 28px;
+    }
+
+    .navbar-expand-md {
+        background: url(./images/home.png) 15px 30px/auto 40px no-repeat;
+    }
+}
+
+.nav-item {
+    height: 40px;
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        margin-right: -.5rem;
+        margin-left: .5rem;
+    }
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    border-bottom: white solid 2px;
+}
+
+/* banner */
+.banner img {
+    width: 100%;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner-txt {
+    position: absolute;
+    color: #FFFFFF;
+}
+
+.banner-txt01 {
+    left: 50%;
+    top: 20%;
+    font-size: 3vw;
+}
+
+.banner-txt02 {
+    right: calc(50% - 12vw);
+    top: calc(20% + 2.5vw);
+    width: 8vw;
+    height: 6vw;
+    background: url(./images/RECOMMENDED\ \ OPPORTUNITIES.png) center center/100% auto no-repeat;
+}
+
+.banner-txt03 {
+    left: calc(50% + 13vw);
+    top: calc(20% + 2vw);
+    font-size: 3.5vw;
+}
+
+/* 信息内容主体 */
+.body-container {
+    margin-bottom: 30px;
+}
+
+.body-nav {
+    margin: 30px 0;
+    font-size: 16px;
+    color: #333333;
+}
+
+.body-nav-choosen {
+    color: #29B078;
+}
+
+/* 左列信息 */
+.list01 {
+    margin-bottom: 30px;
+}
+
+.list01box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF;
+}
+
+.list01-txt01 {
+    width: 100%;
+    height: 60px;
+    border-bottom: #E6E6E6 solid 1px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.list01-txt02 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    margin-left: calc(50% - 50px);
+    font-size: 14px;
+    color: #29B078;
+}
+
+@media only screen and (max-width: 768px) {
+    .list01-txt02 {
+        width: 40%;
+        margin-left: 10%;
+    }
+}
+
+.list01-round {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #FF650E;
+}
+
+.list01-txt02:hover {
+    color: #FF650E;
+}
+
+.list01-txt02:hover .list01-round {
+    background-color: #FF650E;
+}
+
+/* 右侧信息栏 */
+.list02 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 0 0 3px rgba(8, 1, 3, 0.15);
+    background: #FFFFFF;
+    font-size: 14px;
+    color: #999999;
+}
+
+.list02-txt01 {
+    margin: 20px 80px;
+}
+
+.list02-txt01-pic {
+    float: left;
+    width: 130px;
+    height: 80px;
+    background: url(./images/tudou.png) center center/100% auto no-repeat;
+}
+
+.list02-txt01-txt {
+    text-align: justify;
+    text-indent: 30px;
+}
+
+.list02-line {
+    width: 100%;
+    height: 1px;
+    background: #E6E6E6;
+}
+
+.list03 {
+    margin: 30px 80px 80px 80px;
+    text-align: justify;
+}
+
+.list03-txt {
+    margin: 20px 0;
+    text-indent: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+    .list03 {
+        margin: 30px 50px 80px 50px;
+    }
+
+    .list02-txt01 {
+        margin: 30px 50px
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .list03 {
+        margin: 30px 30px 80px 30px;
+    }
+
+    .list02-txt01 {
+        margin: 30px 30px
+    }
+}
+
+/* 页脚 */
+.foot {
+    width: 100%;
+    background: #26A26F;
+}
+
+.foot-txt01 {
+    padding-top: 10px;
+    line-height: 56px;
+    height: 56px;
+    color: white;
+}
+
+.foot-txt02box {
+    display: flex;
+    align-items: center;
+    margin: 40px 0 30px 0;
+    white-space: nowrap;
+}
+
+.foot-txt02 {
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: white;
+}
+
+.foot-txt02-line {
+    margin: 0 10px;
+    height: 14px;
+    width: 2px;
+    background: white;
+}
+
+.foot-txt03 {
+    height: 24px;
+    margin-right: 20px;
+    line-height: 24px;
+    font-size: 14px;
+    color: white;
+}
+
+.foot-txt03box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
+
+.foot-txt04box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.foot-txt02:hover,
+.foot-txt03:hover {
+    border-bottom: white solid 1px;
+}
+
+.foot-list03 {
+    width: 100%;
+    text-align: right;
+}
+
+.foot-code {
+    float: right;
+    top: 60px;
+    margin-bottom: 10px;
+    width: 90px;
+    height: 90px;
+    background: url(./images/code.png) center center/100% 100% no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+    .foot-list03 {
+        text-align: left;
+    }
+
+    .foot-code {
+        float: left;
+    }
+
+    .foot-box {
+        width: 100%;
+        border-top: #32C086 solid 1px;
+    }
+}
+
+.foot-bottom {
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    border-top: #32C086 solid 1px;
+}
