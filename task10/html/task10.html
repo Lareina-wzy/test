@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>task10</title>
+	<link rel="stylesheet" type="text/css" href="../css/task10css.css">
+	<!-- 新 Bootstrap4 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="oneline">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">客服热线：010-594-78634</div>
+				<div class="col-6 onelinep">
+					<div class="online-login">登录</div>
+					<div class="online-new">注册</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 导航 -->
+	<div class="nav">
+		<div class="container">
+			<div class="row">
+				<nav class="col navbar-expand-md navbar-light">
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse " id="collapsibleNavbar">
+						<ul class="navbar-nav justify-content-end">
+							<li class="nav-item">
+								<a class="nav-link" href="#">首页</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">在线定制</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">标准箱</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">品质保障</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- 进度条 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12 two">
+				<div class="two-progress">
+					<div class="progress-line"></div>
+					<div class="progress-circle">4</div>
+					<div class="progress-txt">4.确认下单</div>
+				</div>
+				<div class="two-progress">
+					<div class="progress-line"></div>
+					<div class="progress-circle">3</div>
+					<div class="progress-txt">3.上传附件</div>
+				</div>
+				<div class="two-progress">
+					<div class="progress-line"></div>
+					<div class="progress-circle">2</div>
+					<div class="progress-txt">2.选择数量</div>
+				</div>
+				<div class="two-progress">
+					<div class="progress-line01"></div>
+					<div class="progress-circle01">1</div>
+					<div class="progress-txt01">1.定制纸箱</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 内容区域 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12 three-title-box">
+				<div class="main-line"></div>
+				<div class="main-title">请您按照以下步骤来定制您的纸箱</div>
+			</div>
+		</div>
+		<!-- 箱型 -->
+		<div class="kind">
+			<div class="kind-img kind-img01"></div>
+			<div class="kind-txt">选择箱型</div>
+		</div>
+		<div class="box-kind">
+			<div class="row">
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input">
+					<input type="radio" id="duikx" name="boxkind">
+					<label for="duikx">对口箱</label>
+				</div>
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input">
+					<input type="radio" id="feijh" name="boxkind">
+					<label for="feijh">飞机盒</label>
+				</div>
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input">
+					<input type="radio" id="tiandg" name="boxkind">
+					<label for="tiandg">天地盖</label>
+				</div>
+				<form>
+					<select id="box-select">
+						<option value="aa">查看详情</option>
+						<option value="aaa">对口箱</option>
+						<option value="aaaa">飞机盒</option>
+						<option value="aaaaa">天地盖</option>
+					</select>
+					<div class="select-down">
+						<div class="select-down01"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- 箱型 -->
+		<div class="kind">
+			<div class="kind-img kind-img02"></div>
+			<div class="kind-txt">选择箱型</div>
+		</div>
+		<div class="box-kind">
+			<div class="row">
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input">
+					<input type="radio" id="duikx2" name="boxkind2">
+					<label for="duikx2">内径</label>
+				</div>
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input box-kind-input2">
+					<label for="length01">长</label>
+					<input type="txt" id="duikx2" name="length01">
+					<label for="length01">mm</label>
+				</div>
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input box-kind-input2">
+					<label for="width01">宽</label>
+					<input type="txt" id="duikx2" name="width01">
+					<label for="width01">mm</label>
+				</div>
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input box-kind-input2">
+					<label for="height01">高</label>
+					<input type="txt" id="duikx2" name="height01">
+					<label for="height01">mm</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input">
+					<input type="radio" id="feijh2" name="boxkind22">
+					<label for="feijh2">外径</label>
+				</div>
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input box-kind-input2">
+					<label for="length02">长</label>
+					<input type="txt" id="duikx2" name="length02">
+					<label for="length02">mm</label>
+				</div>
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input box-kind-input2">
+					<label for="width02">宽</label>
+					<input type="txt" id="duikx2" name="width02">
+					<label for="width02">mm</label>
+				</div>
+				<div class="col-12 col-md-3 col-xl-2 box-kind-input box-kind-input2">
+					<label for="height02">高</label>
+					<input type="txt" id="duikx2" name="height02">
+					<label for="height02">mm</label>
+				</div>
+			</div>
+			<form>
+				<select id="box-select">
+					<option value="aa">查看详情</option>
+					<option value="aaa">外径</option>
+					<option value="aaaa">内径</option>
+				</select>
+				<div class="select-down">
+					<div class="select-down01"></div>
+				</div>
+			</form>
+		</div>
+
+		<!-- 箱型 -->
+		<div class="kind">
+			<div class="kind-img kind-img03"></div>
+			<div class="kind-txt">选择箱型</div>
+		</div>
+		<div class="box-kind">
+			<div class="row box-kindbox">
+				<div class="col-12 col-md-4 col-xl-2 box-kind-input">
+					<input type="radio" id="duikx3" name="boxkind3">
+					<label for="duikx3">三层A瓦优质</label>
+				</div>
+				<div class="col-12 col-md-4 col-xl-2 box-kind-input">
+					<input type="radio" id="feijh3" name="boxkind3">
+					<label for="feijh3">三层A瓦优质</label>
+				</div>
+				<div class="col-12 col-md-4 col-xl-2 box-kind-input">
+					<input type="radio" id="tiandg3" name="boxkind3">
+					<label for="tiandg3">三层A瓦优质</label>
+				</div>
+				<div class="col-12 col-md-4 col-xl-2 box-kind-input">
+					<input type="radio" id="tiandg32" name="boxkind3">
+					<label for="tiandg32">三层A瓦优质</label>
+				</div>
+				<div class="col-12 col-md-4 col-xl-2 box-kind-input">
+					<input type="radio" id="tiandg322" name="boxkind3">
+					<label for="tiandg322">三层A瓦优质</label>
+				</div>
+			</div>
+			<form>
+				<select id="box-select">
+					<option value="aa">查看详情</option>
+					<option value="aaa">三层A瓦优质</option>
+					<option value="aaaa">三层A瓦优质</option>
+					<option value="aaaaa">三层A瓦优质</option>
+					<option value="aaaa">三层A瓦优质</option>
+					<option value="aaaaa">三层A瓦优质</option>
+				</select>
+				<div class="select-down">
+					<div class="select-down01"></div>
+				</div>
+			</form>
+			<button class="button-next">下一步</button>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-4 col-lg-4 foot-title">
+					51包装网— 纸箱包装首选服务平台
+				</div>
+				<div class="col-12 col-md-4 col-lg-5 foot-text">
+					<div class="foot-txt"><a href="">关于我们</a></div>
+					<div class="foot-txt"><a href="">配送流程</a></div>
+					<div class="foot-txt"><a href="">联系我们</a></div>
+					<div class="foot-txt"><a href="">下单指南</a></div>
+					<div class="foot-txt"><a href="">媒体介绍</a></div>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 foot-code">
+					<div class="code-left">
+						<div><a href="">TEL：400-0000-000</a></div>
+						<div><a href="">企业QQ：123456789</a></div>
+						<div><a href="">微信号：XXXXXXX</a></div>
+					</div>
+					<div class="foot-pic"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="copyright-box">
+			<span>北京五一包装科技有限公司Copyright ©2015</span>
+			<span>51baozhuang.com015 All rights reserved. 京icp备99999999-1</span>
+		</div>
+	</div>
+</body>
