@@ -219,7 +219,11 @@ button {
     background-color: $blue;
     border-radius: 50%;
 }
-
+a {
+    @include outline();
+    text-decoration: none;
+    color: $blue;
+}
 .button-box {
     margin: 0 15%;
     @include font(center, 9px, $blue);

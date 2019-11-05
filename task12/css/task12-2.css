@@ -229,6 +229,13 @@ button {
   border-radius: 50%;
 }
 
+a {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: #5FC0CD;
+}
+
 .button-box {
   margin: 0 15%;
   text-align: center;
