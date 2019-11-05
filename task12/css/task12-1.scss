@@ -1,0 +1,200 @@
+$blue: #5FC0CD;
+$black: #333333;
+$lightblack: #999999;
+$red: #E26163;
+$gray: #E1E5E7;
+$white: #FFFFFF;
+
+body {
+    margin: 0;
+    background: $white;
+}
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin absolute($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+.header {
+    @include width(100%, 40px);
+    @include font(center, 16px, $white);
+    background: $blue;
+    line-height: 40px;
+}
+
+.arrow {
+    @include absolute(14px, 16px) display: inline-block;
+    border: solid #F8F8F8;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    transform: rotate(135deg);
+}
+
+.background {
+    position: relative;
+    @include width(100%, 145px);
+    background: url(../images/background.png) left top/100% auto no-repeat;
+}
+
+.bg-txt {
+    @include absolute(50px, 110px);
+    color: #FFFFFF;
+}
+
+.year {
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+.location {
+    @include flex(flex-start, center);
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.location-bg {
+    @include width(9px, 11px);
+    margin-right: 8px;
+    background: url(../images/sprites01.png) -100px 0 no-repeat;
+}
+
+.bg-photo {
+    @include width(75px, 75px);
+    @include absolute(35px, 13px);
+    background: url(../images/sprites01.png) 0 -50px no-repeat;
+}
+
+.blueline {
+    @include width(2px, 12px);
+    margin: 0 13px;
+    background: $blue;
+    border-radius: 1px;
+}
+
+.skill {
+    @include flex(flex-start, center);
+    @include width(100%, 44px);
+    @include font(justify, 14px, $black);
+    line-height: 44px;
+}
+
+.main {
+    position: fixed;
+    top: 40px;
+    bottom: 70px;
+    overflow: auto;
+    @include width(100%, auto);
+}
+
+.container {
+    border-top: $gray solid 1px;
+    border-bottom: $gray solid 1px;
+}
+
+.box {
+    @include flex(flex-start, center);
+    @include width(calc(100% - 30px), auto);
+    margin: 0 auto;
+    border-bottom: $gray solid 1px;
+}
+
+
+@mixin margin-left {
+    margin-left: 12px;
+}
+
+.star {
+    @include width(12px, 12px);
+    @include margin-left();
+    background: url(../images/sprites01.png) -50px 0 no-repeat;
+}
+
+.boxtxt {
+    height: 44px;
+    margin-left: 3px;
+    @include font(center, 14px, $black);
+    line-height: 44px;
+}
+
+.txtleft {
+    @include width(56px, auto);
+    @include font(justify, 14px, $lightblack);
+    @include margin-left;
+    line-height: 44px;
+}
+
+.line {
+    @include width(1px, 12px);
+    @include margin-left();
+    background: $lightblack;
+}
+
+.txtright {
+    @include width(calc(100% - 125px), auto);
+    @include margin-left();
+    @include font(justify, 14px, $lightblack);
+}
+
+
+.box3 {
+    @extend .box;
+    border: none;
+}
+
+.txtright2 {
+    @extend .txtright;
+    color: $red;
+}
+
+.txtright3 {
+    @extend .txtright;
+    padding: 5px 0;
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    @include width(100%, 70px);
+    @include flex(space-around, center);
+}
+
+.foot button {
+    @include width(40%, 40px);
+    border-radius: 5px;
+    @include outline();
+    border: $blue solid 1px;
+
+}
+
+.message {
+    @include font(center, 15px, $blue);
+    background: #FFFFFF;
+}
+
+.phone {
+    @include font(center, 15px, #FFFFFF);
+    background: $blue;
+}

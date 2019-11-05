@@ -1,0 +1,230 @@
+$blue: #5FC0CD;
+$bluedark: #55A8B3;
+$black: #333333;
+$lightblack: #999999;
+$red: #E63B0E;
+$graybg: #E1E5E7;
+$grayfoot: #F8FAFB;
+$white: #FFFFFF;
+
+body {
+    margin: 0;
+    background: $white;
+}
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+.header {
+    @include flex(center, center);
+    @include width(100%, 40px);
+    background: $blue;
+}
+
+button {
+    @include outline();
+    padding: 0;
+}
+
+.master {
+    @include width(20%, 30px);
+    @include font(center, 15px, $white);
+    background: $bluedark;
+    border-radius: 5px 0 0 5px;
+}
+
+.work {
+    @include width(20%, 30px);
+    @include font(center, 15px, $blue);
+    background: $white;
+    border-radius: 5px;
+}
+
+.master:hover {
+    background: $white;
+    @include font(center, 15px, $blue);
+    border-radius: 5px;
+}
+
+.map {
+    @include absolute-r(9px, 12px);
+    @include width(22px, 22px);
+    background: url(../images/sprites02.png) 0 0 no-repeat;
+}
+
+.menu {
+    @include flex(center, center);
+    border-bottom: $graybg solid 1px;
+}
+
+.place {
+    @include width(100%, 36px);
+    flex-grow: 1;
+    position: relative;
+    @include font(center, 13px, $lightblack);
+    line-height: 36px;
+}
+
+.line {
+    @include absolute-r(9px, 0);
+    @include width(1px, 18px);
+    background: $graybg;
+}
+
+.square {
+    @include width(0, 0);
+    @include absolute-r(16px, 10px);
+    border: 5px solid;
+    border-color: $graybg transparent transparent transparent;
+}
+
+.placeul {
+    display: none;
+    @include width(100%, auto);
+    @include absolute-l(37px, 0);
+    @include font(center, 14px, $lightblack);
+    box-sizing: border-box;
+    background: $white;
+    z-index: 1;
+}
+
+.placeulborder {
+    border: $graybg 1px solid;
+    border-top: none;
+}
+
+.place:hover .placeul {
+    display: block;
+}
+
+.container {
+    position: fixed;
+    top: 76px;
+    bottom: 50px;
+    overflow: auto;
+    @include width(100%, auto);
+}
+
+.group {
+    @include flex(flex-start, center);
+    @include width(100%, 80px);
+    border-bottom: $graybg 1px solid;
+}
+
+.txt {
+    @include flex(space-between, center);
+    flex-wrap: wrap;
+    @include width(60%, auto);
+}
+
+.date {
+    @include width(100%, auto);
+    @include font(left, 13px, $lightblack);
+    padding-left: 15%;
+}
+
+.icon {
+    @include width(12px, 12px);
+    display: inline-block;
+    background: url(../images/sprites02.png) no-repeat;
+}
+
+.calendar {
+    background-position: -50px 0;
+}
+
+.mapicon {
+    background-position: -100px 0;
+}
+
+.time {
+    @include width(100%, auto);
+    padding-left: calc(15% + 15px);
+    margin: 5px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include font(justify, 14px, $black);
+}
+
+.redtime {
+    @include width(40%, auto);
+    @include font(center, 14px, $red);
+}
+
+.arrow {
+    display: inline-block;
+    border: solid $blue;
+    border-width: 2px 2px 0 0;
+    padding: 5px;
+    transform: rotate(45deg);
+}
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    @include flex(center, center);
+    @include width(100%, 50px);
+    background: $grayfoot;
+}
+
+button {
+    background: url(../images/sprites02.png) no-repeat;
+}
+
+.home {
+    @include width(24px, 18px);
+    background-position: 0 -50px;
+}
+
+.user {
+    @extend .home;
+    background-position: -98px -50px;
+}
+
+.write {
+    @include width(42px, 42px);
+    background-position: -38px -41px;
+    background-color: $blue;
+    border-radius: 50%;
+}
+
+.button-box {
+    margin: 0 15%;
+    @include font(center, 9px, $blue);
+}
+
+.button-box02 {
+    color: $lightblack;
+}

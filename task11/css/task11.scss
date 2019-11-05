@@ -1,0 +1,117 @@
+$blue :#5FC0CD;
+$gray :#EFF0F4;
+$graylight:#E1E5E7;
+
+body {
+    margin: 0;
+    background: $gray;
+}
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin bg($bgcolor, $color) {
+    background: $bgcolor;
+    color: $color;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+.header {
+    @include flex(space-between, center);
+    @include width(100%, 44px);
+    background: $blue;
+    color: #FFFFFF;
+}
+
+.close,
+.register {
+    margin: 0 10px;
+    @include outline();
+    @include bg(none, #FFFFFF);
+}
+
+.login {
+    @include font(center, 18px, #FFFFFF);
+}
+
+input[type="text"] {
+    background: url(../images/iphone.png) #FFFFFF 21px center/14px 20px no-repeat;
+}
+
+input[type="password"] {
+    background: url(../images/locked.png) #FFFFFF 21px center/14px 20px no-repeat;
+}
+
+input {
+    @include outline();
+    @include width(calc(100% - 75px), 50px);
+    padding-left: 75px;
+    margin-top: 10px;
+}
+
+/* WebKit browsers */
+input::-webkit-input-placeholder {
+    color: $graylight;
+}
+
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+    color: $graylight;
+    opacity: 1;
+}
+
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+    color: $graylight;
+    opacity: 1;
+}
+
+/* Internet Explorer 10+ */
+input:-ms-input-placeholder {
+    color: $graylight;
+}
+
+.box {
+    position: relative;
+}
+
+.line {
+    @include width(1px, 26px);
+    position: absolute;
+    left: 58px;
+    top: 22px;
+    background: $graylight;
+}
+
+.button {
+    @include outline();
+    @include bg($blue, #FFFFFF);
+    @include width(100%, 50px);
+    margin-top: 35px;
+}
+
+a {
+    float: right;
+    margin: 10px 10px 0 0;
+    @include outline();
+    text-decoration: none;
+    color: $blue;
+}
