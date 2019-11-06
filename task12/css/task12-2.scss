@@ -111,19 +111,25 @@ button {
 
 .placeul {
     display: none;
-    @include width(100%, auto);
-    @include absolute-l(37px, 0);
+    @include width(calc(1px + 100%), auto);
+    @include absolute-l(37px, -1px);
     @include font(center, 14px, $lightblack);
     box-sizing: border-box;
     background: $white;
     z-index: 1;
 }
 
-.placeulborder {
+.placeulborder1 {
+    border-bottom: $graybg 1px solid;
+    border-right: $graybg 1px solid;
+}
+.placeulborder2 {
     border: $graybg 1px solid;
     border-top: none;
+}.placeulborder3 {
+    border-bottom: $graybg 1px solid;
+    border-left: $graybg 1px solid;
 }
-
 .place:hover .placeul {
     display: block;
 }

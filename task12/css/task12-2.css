@@ -94,11 +94,11 @@ button {
 
 .placeul {
   display: none;
-  width: 100%;
+  width: calc(1px + 100%);
   height: auto;
   position: absolute;
   top: 37px;
-  left: 0;
+  left: -1px;
   text-align: center;
   font-size: 14px;
   color: #999999;
@@ -107,9 +107,19 @@ button {
   z-index: 1;
 }
 
-.placeulborder {
+.placeulborder1 {
+  border-bottom: #E1E5E7 1px solid;
+  border-right: #E1E5E7 1px solid;
+}
+
+.placeulborder2 {
   border: #E1E5E7 1px solid;
   border-top: none;
+}
+
+.placeulborder3 {
+  border-bottom: #E1E5E7 1px solid;
+  border-left: #E1E5E7 1px solid;
 }
 
 .place:hover .placeul {
