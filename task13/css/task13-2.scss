@@ -1,0 +1,218 @@
+@charset "utf-8";
+$blue: #29BDE0;
+$black: #464646;
+$lightblack: #565656;
+$red: #F66F6F;
+$graybg: #F0F0F0;
+$grayborder: #C9C9C9;
+$white: #FFFFFF;
+$yellow: #FBB435;
+$yellowtxt: #F5C97B;
+$green: rgba(26, 153, 183, .52);
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin fix($top, $left, $bottom) {
+    position: fixed;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $blue;
+}
+
+.g-header {
+    @include flex(space-between, center);
+    @include width(100%, 44px);
+    @include font(center, 17px, $white);
+    background: $blue;
+
+    .m-nav {
+        @include width(16px, 15px);
+        margin-left: 10px;
+        border: $white solid 1px;
+
+        .line {
+            width: 12px;
+            height: 1px;
+            margin: 3px 2px 0 2px;
+            background: $white;
+        }
+    }
+
+    .close {
+        width: 20px;
+        height: 1px;
+        margin-right: 10px;
+        background: $white;
+        transform: rotate(45deg);
+    }
+
+    .close:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 1px;
+        background: $white;
+        transform: rotate(-90deg);
+
+    }
+}
+
+.g-title {
+    position: relative;
+    @include width(calc(100% - 23px), 40px);
+    padding-left: 23px;
+    @include font(justify, 13px, $black);
+    line-height: 40px;
+    background: rgba(255, 255, 255, .67);
+
+    .audio {
+        transform: rotate(90deg);
+        @include absolute-r(110px, -134px);
+        opacity: .0;
+    }
+
+    .play {
+        pointer-events: none;
+        position: relative;
+        float: right;
+        margin-top: 7px;
+        margin-right: 10px;
+        @include width(26px, 26px);
+        border-radius: 50%;
+        background: $yellow;
+
+        .square01 {
+            @include absolute-r(8px, 4px);
+            @include width(0, 0);
+            border-top: 10px solid;
+            border-right: 8px solid;
+            border-left: 8px solid;
+            border-color: $white transparent transparent transparent;
+            transform: rotate(-90deg);
+        }
+    }
+
+    .square {
+        @include width(0, 0);
+        border: 6px solid;
+        border-color: rgba(255, 255, 255, .67) transparent transparent transparent;
+    }
+
+    .txt {
+        @include font(justify, 12px, $white);
+        line-height: 16px;
+    }
+}
+
+.g-main {
+    @include flex(space-between, flex-start);
+    flex-wrap: wrap;
+    @include fix(112px, 0, 90px);
+    overflow: auto;
+    @include width(90%, auto);
+    padding: 0 5% 0 5%;
+    margin-top: 2%;
+
+    .m-group {
+        position: relative;
+        width: 20vw;
+        height: 20vw;
+        margin: 2vw 3% 8vw 3%;
+        border: $white solid 1px;
+        background: $yellowtxt;
+        line-height: 14vw;
+        @include font(center, 15px, $black);
+
+        .txt {
+            @include width(100%, 6vw);
+            line-height: 6vw;
+            background: $green;
+        }
+
+        .choose {
+            @include absolute-l(22vw, -1px);
+            @include width(calc(20vw + 2px), 4vw);
+            @include flex(space-between, center);
+            display: none;
+        }
+
+        .choose01,
+        .choose02,
+        .choose03,
+        .choose04 {
+            @include width(4vw, 4vw);
+        }
+
+        .choose01 {
+            background: url(../images/sprites2.png) $white 0 0/200% 200% no-repeat;
+        }
+
+        .choose02 {
+            background: url(../images/sprites2.png) $white 0 100%/200% 200% no-repeat;
+        }
+
+        .choose03 {
+            background: url(../images/sprites2.png) $white 100% 0/200% 200% no-repeat;
+        }
+
+        .choose04 {
+            background: url(../images/sprites2.png) $white 100% 100%/200% 200% no-repeat;
+        }
+
+        &:hover .choose {
+            display: flex;
+        }
+    }
+}
+
+.g-foot {
+    position: fixed;
+    bottom: 0;
+    @include width(100%, 90px);
+
+    .select {
+        @include width(70%, 44px);
+        margin: 23px 15%;
+        @include font(center, 20px, $white);
+        @include outline();
+        background: $yellow;
+    }
+}

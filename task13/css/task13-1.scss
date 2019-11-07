@@ -1,0 +1,219 @@
+@charset "utf-8";
+$blue: #29BDE0;
+$black: #787878;
+$lightblack: #9A9A9A;
+$red: #F66F6F;
+$graybg: #F0F0F0;
+$grayborder: #C9C9C9;
+$white: #FFFFFF;
+$yellow: #FBB435;
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin fix($top, $left, $bottom) {
+    position: sticky;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+body {
+    margin: 0;
+    background: $graybg;
+    overflow: hidden;
+}
+
+
+input {
+    display: none;
+}
+
+.nav-left {
+    @include width(200px, 100vh);
+    float: left;
+    background: $white;
+    overflow: hidden;
+    margin-left: -200px;
+
+    .li {
+        @include flex(space-between, center);
+        @include width(200px, 40px);
+        color: $blue;
+        line-height: 30px;
+        border-bottom: $blue solid 1px;
+
+        .announce,
+        .set,
+        .help,
+        .about {
+            @include width(23px, 23px);
+            margin-left: 30px;
+        }
+
+        .announce {
+            background: url(../images/sprites.png) -120px 0 no-repeat;
+        }
+
+        .set {
+            background: url(../images/sprites.png) -30px 0 no-repeat;
+        }
+
+        .help {
+            background: url(../images/sprites.png) -60px 0 no-repeat;
+        }
+
+        .about {
+            background: url(../images/sprites.png) -90px 0 no-repeat;
+        }
+    }
+
+    .arrow {
+        @include width(12px, 12px);
+        margin-right: 30px;
+        border-top: $blue solid 2px;
+        border-right: $blue solid 2px;
+        transform: rotate(45deg);
+    }
+}
+
+
+/*Animate content area to the right*/
+#nav:checked~.nav-left {
+    margin-left: 0;
+}
+
+#nav:checked~.g-right {
+    margin-left: 200px;
+}
+
+.g-right {
+    width: 100%;
+}
+
+.g-head {
+    position: relative;
+    @include width(100%, 44px);
+    background: $blue;
+}
+
+.m-nav {
+    @include absolute-l(20px, 10px);
+
+    .u-line {
+        @include width(20px, 1px);
+        margin-bottom: 4px;
+        background: $white;
+    }
+}
+.g-main {
+    @include width(100%, auto);
+    position: sticky;
+    overflow: auto;
+    background: $graybg;
+}
+
+.u-title {
+    @include width(80%, 58px);
+    @include font(center, 18px, $lightblack);
+    line-height: 58px;
+    margin: 14px auto;
+    background: $white;
+    border: $grayborder solid 1px;
+}
+
+.m-container {
+    @include width(80%, 75vh);
+    position: relative;
+    margin: 0 auto;
+    background: $white;
+    border: $grayborder solid 1px;
+
+    .main-title {
+        @include width(100%, 45px);
+        line-height: 45px;
+        @include font(center, 18px, $yellow);
+        border-bottom: 1px solid $yellow;
+    }
+
+    .m-box {
+        overflow: auto;
+        @include fix(45px, 0, 20px);
+        @include width(100%, calc(75vh - 65px));
+
+        a {
+            @include outline();
+            text-decoration: none;
+            color: $white;
+        }
+
+        .choose {
+            @include width(80%, 68px);
+            margin: 15px auto;
+            @include font(center, 16px, $white);
+            line-height: 68px;
+            background: $blue;
+        }
+
+        .txt {
+            @include font(center, 12px, $lightblack);
+        }
+    }
+
+    .u-page {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        @include width(100%, 20px);
+        @include flex(center, center);
+
+        .round {
+            @include width(10px, 10px);
+            margin: 0 5px;
+            border-radius: 50%;
+            background: $graybg;
+
+            &:hover {
+                background: $blue;
+            }
+        }
+    }
+
+    .u-btn {
+        @include absolute-l(195px, 93%);
+        border: 14px solid $yellow;
+        border-color: transparent transparent transparent $yellow;
+    }
+
+}
