@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>inline&block</title>
+    <style>
+        .parent {
+            /* font-weight: bold; */
+            /* font-style: italic; */
+            /* font-size: 24px; */
+            /* color: yellow; */
+
+            /* text-indent: 50px; */
+            /* text-align: center; */
+            /* line-height: 40px; */
+            /* word-spacing: 50px; */
+            /* letter-spacing: 10px; */
+
+            /* direction: rtl; */
+            /* 从右到左 */
+            /* text-transform: capitalize; */
+            /* 文本中的每个单词以大写字母开头。 */
+            /* color: red; */
+
+            
+            /* visibility: hidden; */
+            /* opacity: .5; */
+        }
+
+        .child {
+            opacity: 1;
+        }
+        span {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    这是在div标签外的文本。look at me
+    </br></br>
+
+    <div class="parent">
+        这是包含在div父元素内，子元素外的文本。 look at me
+        <br><br>
+
+        <span>
+            这是包含在span标签内的文本。look at me
+        </span>
+        
+        <div class="child">
+            这是包含在div（child）标签内的文本。look at me
+        </div>
+    </div>
+
+
+</body>
+
+</html>
