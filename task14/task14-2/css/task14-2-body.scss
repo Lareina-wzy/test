@@ -1,0 +1,182 @@
+$green: #29B078;
+$black: #333333;
+$lightblack: #999999;
+$bg: #fafafa;
+$white: #ffffff;
+$border: #E6E6E6;
+$red: #FF650E;
+$orange: #F9A372;
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin fixtop($top, $left) {
+    position: fixed;
+    top: $top;
+    left: $left;
+}
+
+@mixin fixbt($left, $bottom) {
+    position: fixed;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+.g-carouse {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    .pic {
+        @include absolute-l(6.8vw, 45vw);
+        width: 9vw;
+        height: 7vw;
+        background: url(../images/txt.png) 0 0 /100% auto no-repeat;
+    }
+
+    .txt-top {
+        @include absolute-l(3vw, 45vw);
+        font-size: 2.5vw;
+        color: $white;
+    }
+
+    .txt-bottom {
+        @include absolute-l(5vw, 55.5vw);
+        font-size: 3.2vw;
+        color: $white;
+    }
+
+}
+
+.g-main {
+    margin-bottom: 100px;
+    .title {
+        @include width(100%, 80px);
+        color: $black;
+        line-height: 80px;
+
+        .green {
+            color: $green;
+        }
+    }
+
+    .list {
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        background: $white;
+
+        .list-title {
+            width: 100%;
+            border-bottom: $border solid 1px;
+            text-align: center;
+            color: $black;
+            line-height: 60px;
+        }
+    }
+
+    .list-main {
+        width: 100px;
+        margin-top: 20px;
+        margin-left: calc(50% - 45px);
+        margin-bottom: 30px;
+        text-align: justify;
+        font-size: 14px;
+        color: $green;
+    }
+
+    .list-txt {
+        display: flex;
+        align-items: center;
+        line-height: 40px;
+        overflow: hidden;
+
+        .round {
+            @include width(8px, 8px);
+            margin-right: 10px;
+            border: $red solid 1px;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            color: $red;
+
+            .round {
+                background: $orange;
+            }
+        }
+    }
+
+    .int {
+        margin-bottom: 30px;
+        width: 100%;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        background: $white;
+        text-indent: 28px;
+        letter-spacing: 1px;
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 20px;
+        color: $lightblack;
+
+        .main01 {
+            padding: 30px 10%;
+            margin: 0 auto;
+            border-bottom: $border solid 1px;
+            
+        }
+        img {
+            width: 130px;
+            float: left;
+            margin-right: 10px;
+        }
+        .main02 {
+            padding: 30px 10%;
+            margin: 0 auto;
+            div {
+                margin: 18px 0;
+            }
+        }
+
+    }   
+
+
+
+
+
+
+}

@@ -1,0 +1,333 @@
+.container {
+  width: calc(100% - 30px);
+  padding: 0 15px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 576px) {
+  .col-1 {
+    width: calc(100% / 12 * 1 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-2 {
+    width: calc(100% / 12 * 2 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-3 {
+    width: calc(100% / 12 * 3 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-4 {
+    width: calc(100% / 12 * 4 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-5 {
+    width: calc(100% / 12 * 5 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-6 {
+    width: calc(100% / 12 * 6 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-7 {
+    width: calc(100% / 12 * 7 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-8 {
+    width: calc(100% / 12 * 8 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-9 {
+    width: calc(100% / 12 * 9 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-10 {
+    width: calc(100% / 12 * 10 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-11 {
+    width: calc(100% / 12 * 11 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-12 {
+    width: calc(100% / 12 * 12 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .col-sm-1 {
+    width: calc(100% / 12 * 1 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-2 {
+    width: calc(100% / 12 * 2 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-3 {
+    width: calc(100% / 12 * 3 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-4 {
+    width: calc(100% / 12 * 4 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-5 {
+    width: calc(100% / 12 * 5 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-6 {
+    width: calc(100% / 12 * 6 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-7 {
+    width: calc(100% / 12 * 7 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-8 {
+    width: calc(100% / 12 * 8 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-9 {
+    width: calc(100% / 12 * 9 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-10 {
+    width: calc(100% / 12 * 10 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-11 {
+    width: calc(100% / 12 * 11 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-sm-12 {
+    width: calc(100% / 12 * 12 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .container {
+    max-width: 510px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-1 {
+    width: calc(100% / 12 * 1 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-2 {
+    width: calc(100% / 12 * 2 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-3 {
+    width: calc(100% / 12 * 3 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-4 {
+    width: calc(100% / 12 * 4 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-5 {
+    width: calc(100% / 12 * 5 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-6 {
+    width: calc(100% / 12 * 6 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-7 {
+    width: calc(100% / 12 * 7 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-8 {
+    width: calc(100% / 12 * 8 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-9 {
+    width: calc(100% / 12 * 9 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-10 {
+    width: calc(100% / 12 * 10 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-11 {
+    width: calc(100% / 12 * 11 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-md-12 {
+    width: calc(100% / 12 * 12 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .container {
+    max-width: 690px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .col-lg-1 {
+    width: calc(100% / 12 * 1 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-2 {
+    width: calc(100% / 12 * 2 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-3 {
+    width: calc(100% / 12 * 3 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-4 {
+    width: calc(100% / 12 * 4 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-5 {
+    width: calc(100% / 12 * 5 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-6 {
+    width: calc(100% / 12 * 6 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-7 {
+    width: calc(100% / 12 * 7 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-8 {
+    width: calc(100% / 12 * 8 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-9 {
+    width: calc(100% / 12 * 9 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-10 {
+    width: calc(100% / 12 * 10 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-11 {
+    width: calc(100% / 12 * 11 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-lg-12 {
+    width: calc(100% / 12 * 12 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .container {
+    max-width: 930px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .col-xl-1 {
+    width: calc(100% / 12 * 1 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-2 {
+    width: calc(100% / 12 * 2 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-3 {
+    width: calc(100% / 12 * 3 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-4 {
+    width: calc(100% / 12 * 4 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-5 {
+    width: calc(100% / 12 * 5 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-6 {
+    width: calc(100% / 12 * 6 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-7 {
+    width: calc(100% / 12 * 7 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-8 {
+    width: calc(100% / 12 * 8 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-9 {
+    width: calc(100% / 12 * 9 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-10 {
+    width: calc(100% / 12 * 10 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-11 {
+    width: calc(100% / 12 * 11 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .col-xl-12 {
+    width: calc(100% / 12 * 12 - 30px);
+    padding: 0 15px;
+    float: left;
+  }
+  .container {
+    max-width: 1110px;
+  }
+}

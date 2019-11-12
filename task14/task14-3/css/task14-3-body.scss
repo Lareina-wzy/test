@@ -1,0 +1,268 @@
+$green: #29B078;
+$black: #333333;
+$lightblack: #999999;
+$bg: #fafafa;
+$white: #ffffff;
+$border: #D0D6D9;
+$red: #F01400;
+$table: #EDF1F2;
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin fixtop($top, $left) {
+    position: fixed;
+    top: $top;
+    left: $left;
+}
+
+@mixin fixbt($left, $bottom) {
+    position: fixed;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+
+
+.g-main {
+    color: $black;
+
+    a {
+        @include outline();
+        text-decoration: none;
+        color: $black;
+    }
+
+    .title {
+        @include width(100%, 80px);
+        line-height: 80px;
+
+        .green {
+            color: $green;
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        min-height: 60px;
+        font-size: 14px;
+        line-height: 24px;
+        border-top: $border solid 1px;
+        border-bottom: $border solid 1px;
+        white-space: nowrap;
+
+        .gray {
+            margin-right: 10px;
+            color: $lightblack;
+        }
+
+
+    }
+
+    .menu-choose {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        div {
+            padding: 0 4px;
+            margin-right: 20px;
+
+            &:hover {
+                color: $white;
+                background: $green;
+            }
+        }
+    }
+
+    .name {
+        line-height: 80px;
+        font-weight: bold;
+        border-bottom: $border solid 1px;
+    }
+
+    table {
+        width: 100%;
+        margin: 40px 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: $white;
+        font-size: 12px;
+    }
+
+    td {
+        border: $table solid 1px;
+    }
+
+    .table {
+        position: relative;
+
+
+        .pic {
+            float: left;
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+            background: url(../images/sprites22.png) 0 0/150% auto no-repeat;
+        }
+    }
+
+    .txt01 {
+        font-weight: bold;
+    }
+
+    .txt02 {
+        font-size: 14px;
+        word-break: break-all;
+    }
+
+    .red {
+        color: $red;
+    }
+
+    .f16 {
+        font-size: 16px;
+    }
+
+    .f14 {
+        font-size: 14px;
+    }
+
+    .gray {
+        color: $lightblack;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .ml-10 {
+        margin-left: 10px;
+    }
+
+    .right {
+        float: right;
+        margin-right: 10px;
+    }
+
+    .star {
+        float: left;
+        margin-left: 10px;
+        margin-right: -5px;
+        @include width(16px, 16px);
+        background: url(../images/sprites22.png) -150px 0 no-repeat;
+    }
+
+    .black {
+        position: absolute;
+        left: 15px;
+        top: 40px;
+        width: calc(100% - 30px);
+        height: calc(100% - 80px);
+        visibility: hidden;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, .76);
+        color: $white;
+
+        .first {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .main {
+            text-align: justify;
+            margin: -30px 20px;
+            text-indent: 32px;
+        }
+    }
+
+    .table:hover .black {
+        visibility: visible;
+    }
+
+    .table:hover .black01 {
+        animation: x 1s;
+
+        @keyframes x {
+            100% {
+                transform: rotateX(360deg);
+            }
+        }
+    }
+
+    .table:hover .black02 {
+        animation: y 1s;
+
+        @keyframes y {
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+
+    .table:hover .black03 {
+        animation: height 1s;
+
+        @keyframes height {
+            0% {
+                height: 0;
+            }
+
+            100% {
+                height: calc(100% - 80px);
+            }
+        }
+    }
+
+    .table:hover .black04 {
+        animation: width 1s;
+
+        @keyframes width {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: calc(100% - 30px);
+            }
+        }
+    }
+
+
+
+}

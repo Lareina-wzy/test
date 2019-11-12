@@ -1,0 +1,430 @@
+$green: #29B078;
+$black: #333333;
+$lightblack: #999999;
+$bg: #fafafa;
+$white: #ffffff;
+
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin fixtop($top, $left) {
+    position: fixed;
+    top: $top;
+    left: $left;
+}
+
+@mixin fixbt($left, $bottom) {
+    position: fixed;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+.g-carouse {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    input {
+        display: none;
+    }
+
+    .carouse-pic {
+        width: 400vw;
+        height: 30vw;
+        overflow: hidden;
+
+        .pic01,
+        .pic02,
+        .pic03,
+        .pic04 {
+            float: left;
+            width: 100vw;
+            height: 30vw;
+        }
+
+        .pic01 {
+            background: url(../images/1.png) 0 0 /100% auto no-repeat;
+        }
+
+        .pic02 {
+            background: url(../images/3.png) 0 0 /100% auto no-repeat;
+        }
+
+        .pic03 {
+            background: url(../images/1.png) 0 0 /100% auto no-repeat;
+        }
+
+        .pic04 {
+            background: url(../images/4.png) 0 0 /100% auto no-repeat;
+        }
+    }
+
+    .line-box {
+        position: absolute;
+        bottom: 3vw;
+        left: calc(50% - 11vw);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .line {
+        width: 4vw;
+        height: .5vw;
+        margin: 0 .5vw;
+        background: rgba(255, 255, 255, .28);
+    }
+
+    .pic-left,
+    .pic-right {
+        position: absolute;
+        top: calc(50% - 1vw);
+        z-index: 1;
+        @include width(2vw, 2vw);
+        border-top: rgba(255, 255, 255, .28) solid 2px;
+        border-left: rgba(255, 255, 255, .28) solid 2px;
+    }
+
+    .pic-left {
+        left: 10%;
+        transform: rotate(-45deg);
+    }
+
+    .pic-right {
+        right: 10%;
+        transform: rotate(135deg);
+    }
+
+    #pic-right:checked~.carouse-pic {
+        margin-left: -100vw;
+    }
+
+    #pic-left:checked~.carouse-pic {
+        margin-left: 100vw;
+    }
+
+    #pic01:checked~.carouse-pic {
+        margin-left: 0;
+    }
+
+    #pic02:checked~.carouse-pic {
+        margin-left: -100vw;
+    }
+
+    #pic03:checked~.carouse-pic {
+        margin-left: -200vw;
+    }
+
+    #pic04:checked~.carouse-pic {
+        margin-left: -300vw;
+    }
+}
+
+.txt01 {
+    margin: 100px 0 20px 0;
+    @include font(center, 18px, $black);
+}
+
+.txt02 {
+    @include font(justify, 16px, $lightblack);
+}
+
+.g-main {
+
+    .pic {
+        margin: 0 auto;
+    }
+
+    .txt01 {
+        margin: 30px 0;
+    }
+
+    .sum01,
+    .sum02,
+    .sum03,
+    .sum04 {
+        margin-top: 80px;
+        height: 200px;
+    }
+
+    .sum01 {
+        .pic {
+            @include width(43px, 62px);
+            background: url(../images/sprites.png) -200px 0 no-repeat;
+        }
+    }
+
+    .sum02 {
+        .pic {
+            @include width(60px, 62px);
+            background: url(../images/sprites.png) -300px 0 no-repeat;
+        }
+
+        .txt02 {
+            text-align: center;
+        }
+    }
+
+    .sum03 {
+        .pic {
+            @include width(52px, 62px);
+            background: url(../images/sprites.png) -400px 0 no-repeat;
+        }
+    }
+
+    .sum04 {
+        margin-left: -1px;
+        border-left: $lightblack dashed 1px;
+    }
+
+    .sum04-box {
+        width: 160px;
+        height: 160px;
+        margin: 40px auto;
+
+        .pic02 {
+            @include width(13px, 13px);
+            display: inline-block;
+            padding-right: 15px;
+            background: url(../images/sprites.png) 0 -50px no-repeat;
+        }
+
+        .txt04 {
+            margin: 20px 0;
+            @include font(justify, 16px, $lightblack);
+        }
+
+        .txt03 {
+            @include font(left, 16px, $green);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .txt02 {
+            text-align: center;
+        }
+
+        .sum01,
+        .sum02,
+        .sum03 {
+            margin-top: 60px;
+        }
+
+        .sum04 {
+            border: none;
+            margin-top: 40px;
+        }
+    }
+}
+
+.g-learn {
+    .group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+    }
+
+    .round {
+        flex: none;
+        @include width(50px, 50px);
+        @include font(center, 18px, $green);
+        line-height: 50px;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: 1px 1px 3px rgba(8, 1, 3, 0.15);
+    }
+
+    .txt05 {
+        width: calc(100% - 80px);
+        padding: 0 16px;
+        @include font(left, 14px, $lightblack);
+    }
+
+    .pic {
+        flex: none;
+        @include width(28px, 26px);
+        background: url(../images/sprites.png) -50px -50px no-repeat;
+    }
+
+    @media screen and (max-width: 768px) {
+        .pic {
+            display: none;
+        }
+
+        .group {
+            justify-content: flex-start;
+            height: 80px;
+        }
+    }
+}
+
+.g-show {
+    .group {
+        width: 100%;
+        margin-top: 30px;
+        overflow: hidden;
+        background: $white;
+        box-shadow: 0 0 3px rgba(8, 1, 3, 0.15);
+    }
+
+    .pic {
+        @include width(108px, 108px);
+        margin: 30px auto;
+        background: url(../images/sprites.png) 0 -100px no-repeat;
+    }
+
+    .txt06 {
+        margin: 20px 0 16px 0;
+        font-size: 18px;
+        text-align: center;
+        color: $black;
+    }
+
+    .txt02 {
+        margin: 0 20px 40px 20px;
+        line-height: 26px;
+    }
+
+    position: relative;
+    overflow: hidden;
+
+    .round {
+        @include width(100%, 20px);
+        float: left;
+        margin: 30px 0;
+        @include flex(center, center);
+
+        div {
+            margin: 0 10px;
+            @include width(13px, 13px);
+            border-radius: 50%;
+            background: $white;
+            box-shadow: 1px 1px 1px rgba(8, 1, 3, 0.15);
+
+            &:hover {
+                background: $green;
+            }
+        }
+
+    }
+}
+
+.g-partner {
+
+    .col-sm-12 {
+        @include flex(center, center);
+        margin-bottom: 100px;
+    }
+
+    .logo-box {
+        @include flex(center, center);
+        @include width(240px, 180px);
+        float: left;
+        background: $white;
+
+        &:hover {
+            z-index: 1;
+            box-shadow: 0 0 13px rgba(8, 1, 3, 0.1);
+        }
+    }
+
+    @media screen and (max-width:1200px) {
+        .col-sm-12 {
+            flex-wrap: wrap;
+        }
+
+        .logo-box {
+            width: 100%;
+        }
+    }
+
+    .logo01 {
+        @include width(150px, 100px);
+        background: url(../images/sprites.png) -150px -250px no-repeat;
+    }
+
+    .logo02 {
+        @include width(100px, 100px);
+        background: url(../images/sprites.png) -100px -350px no-repeat;
+    }
+
+    .logo04 {
+        @include width(200px, 50px);
+        background: url(../images/sprites.png) -300px -250px no-repeat;
+    }
+
+    .logo03 {
+        @include width(150px, 100px);
+        background: url(../images/sprites.png) -300px -300px no-repeat;
+    }
+
+    .logo05 {
+        @include width(150px, 100px);
+        background: url(../images/sprites.png) -250px -400px no-repeat;
+    }
+}
+
+.g-link {
+    width: 100%;
+    overflow: hidden;
+    background: $white;
+
+    .container {
+        margin-bottom: 20px;
+    }
+
+    .txt01 {
+        margin: 20px 0;
+    }
+
+    .link-box {
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        @include font(justify, 14px, $lightblack);
+        white-space: nowrap;
+
+        li {
+            margin: 4px 0;
+        }
+
+        @media screen and (max-width: 992px) {
+            li {
+                width: 100%;
+                margin-left: calc(50% - 40px);
+            }
+        }
+    }
+}

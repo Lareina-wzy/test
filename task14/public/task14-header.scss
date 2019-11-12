@@ -1,0 +1,203 @@
+$green: #29B078;
+$black: #333333;
+$lightblack: #999999;
+$bg: #fafafa;
+$white: #ffffff;
+
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin fixtop($top, $left) {
+    position: fixed;
+    top: $top;
+    left: $left;
+}
+
+@mixin fixbt($left, $bottom) {
+    position: fixed;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $bg;
+}
+
+.g-online {
+    width: 100%;
+    line-height: 40px;
+    color: $green;
+    background: $white;
+
+    .qq {
+        @include width(22px, 22px);
+        float: right;
+        margin: 8px 0 8px 8px;
+        border: $green solid 1px;
+        border-radius: 50%;
+        background: url(../images/sprites.png) -50px 0 no-repeat;
+    }
+
+    .wechat {
+        @extend .qq;
+        background: url(../images/sprites.png) 0 0 no-repeat;
+    }
+
+    .sina {
+        @extend .qq;
+        background: url(../images/sprites.png) -100px 0 no-repeat;
+    }
+
+    @media screen and (max-width: 576px) {
+        .qq {
+            float: left;
+            margin: 8px 8px 8px 0;
+        }
+    }
+}
+
+.g-header {
+    width: 100%;
+    background: $green;
+
+    .container {
+        min-height: 100px;
+    }
+
+    .pic {
+        height: 60px;
+        margin: 20px -15px 20px 15px;
+        background: url(../images/home-logo.png) 0 0/ auto 100% no-repeat;
+    }
+
+    @media screen and (max-width:400px) {
+        .pic {
+            height: 48px;
+            margin: 26px -15px 26px 15px;
+        }
+    }
+
+    .nav-ul {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 -32px 0 0;
+    }
+
+    a {
+        float: right;
+        @include outline();
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            border-bottom: $white 2px solid;
+        }
+    }
+
+    .nav-btn {
+        display: none;
+        // display: block;
+        @include outline();
+        @include width(56px, 42px);
+        float: right;
+        margin-top: 30px;
+        border-radius: 8px;
+        border: $white solid 1px;
+        background: $green;
+
+        div {
+            @include width(30px, 2px);
+            background: $white;
+            margin: 9px 14px;
+        }
+    }
+
+    input {
+        display: none;
+    }
+
+    @media screen and (max-width:992px) {
+        .pic {
+            background: url(../images/home.png) 0 0/ auto 100% no-repeat;
+        }
+
+        a {
+            width: 80px;
+        }
+
+        .nav-ul {
+            margin-right: -24px;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .nav-btn {
+            display: block;
+        }
+
+        .nav-ul {
+            display: none;
+            // display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 100px;
+            margin-left: calc(-100% - 45px);
+        }
+
+        a {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+
+            &:hover {
+                border-bottom: none;
+            }
+        }
+
+        #nav:checked+.nav-ul {
+            display: flex;
+        }
+
+    }
+
+}

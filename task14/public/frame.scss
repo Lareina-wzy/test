@@ -1,0 +1,75 @@
+.container {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 576px) {
+    @for $i from 1 to 13 {
+        .col-#{$i} {
+            width: calc(100% / 12 * #{$i} - 30px);
+            padding: 0 15px;
+            float: left;
+        }
+    }
+}
+@media only screen and (min-width: 576px) {
+    @for $i from 1 to 13 {
+        .col-sm-#{$i} {
+            width: calc(100% / 12 * #{$i} - 30px);
+            padding: 0 15px;
+            float: left;
+        }
+    }
+
+    .container {
+        max-width: 510px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    @for $i from 1 to 13 {
+        .col-md-#{$i} {
+            width: calc(100% / 12 * #{$i} - 30px);
+            padding: 0 15px;
+            float: left;
+        }
+    }
+
+    .container {
+        max-width: 690px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    @for $i from 1 to 13 {
+        .col-lg-#{$i} {
+            width: calc(100% / 12 * #{$i} - 30px);
+            padding: 0 15px;
+            float: left;
+        }
+    }
+        .container {
+            max-width: 930px;
+        }
+    
+}
+
+
+@media only screen and (min-width: 1200px) {
+    @for $i from 1 to 13 {
+        .col-xl-#{$i} {
+            width: calc(100% / 12 * #{$i} - 30px);
+            padding: 0 15px;
+            float: left;
+        }
+    }
+        .container {
+            max-width: 1110px;
+        }
+   
+}
+

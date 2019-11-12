@@ -1,0 +1,129 @@
+$green: #29B078;
+$lightgreen: #32C086;
+$black: #333333;
+$lightblack: #999999;
+$bg: #fafafa;
+$white: #ffffff;
+
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin fixtop($top, $left) {
+    position: fixed;
+    top: $top;
+    left: $left;
+}
+
+@mixin fixbt($left, $bottom) {
+    position: fixed;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+.g-footer {
+    width: 100%;
+    background: $green;
+
+    // .col-md-12 {
+    //     padding: 0 15px;
+    // }
+ 
+    .txt-f01 {
+        color: $white;
+        margin-top: 35px;
+        margin-bottom: 16px;
+    }
+
+    .txt-f02 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        @include font(justify, 14px, $white);
+        line-height: 24px;
+
+        span:hover {
+            border-bottom: $white solid 1px;
+        }
+
+        .line {
+            margin: 0 10px;
+            @include width(1px, 14px);
+            background: $white;
+
+        }
+    }
+
+    .txt-f02-left {
+        margin-top: 48px;
+    }
+
+    .txt-f02-right span {
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    .code {
+        text-align: right;
+        overflow: hidden;;
+
+        .pic {
+            float: right;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            @include width(92px, 92px);
+            background: url(../images/code.png) 0 0 /100% 100% no-repeat;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .col-md-12 {
+            border-bottom: $lightgreen solid 1px;
+        }
+
+        .code {
+            text-align: left;
+
+            .pic {
+                float: left;
+            }
+        }
+    }
+
+    .copyright {
+        @include font(center, 12px, $white);
+        line-height: 30px;
+        border-top: $lightgreen solid 1px;
+    }
+}
