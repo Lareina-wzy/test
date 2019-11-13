@@ -9,9 +9,28 @@
 }
 
 .g-carouse .carouse-pic {
-  width: 400vw;
+  width: 500vw;
   height: 30vw;
   overflow: hidden;
+  animation: carouse 20s infinite linear;
+}
+
+@keyframes carouse {
+  0%, 15% {
+    margin-left: 0;
+  }
+  25%, 40% {
+    margin-left: -100vw;
+  }
+  50%, 65% {
+    margin-left: -200vw;
+  }
+  75%, 90% {
+    margin-left: -300vw;
+  }
+  100% {
+    margin-left: -400vw;
+  }
 }
 
 .g-carouse .carouse-pic .pic01,
@@ -74,30 +93,6 @@
 .g-carouse .pic-right {
   right: 10%;
   transform: rotate(135deg);
-}
-
-.g-carouse #pic-right:checked ~ .carouse-pic {
-  margin-left: -100vw;
-}
-
-.g-carouse #pic-left:checked ~ .carouse-pic {
-  margin-left: 100vw;
-}
-
-.g-carouse #pic01:checked ~ .carouse-pic {
-  margin-left: 0;
-}
-
-.g-carouse #pic02:checked ~ .carouse-pic {
-  margin-left: -100vw;
-}
-
-.g-carouse #pic03:checked ~ .carouse-pic {
-  margin-left: -200vw;
-}
-
-.g-carouse #pic04:checked ~ .carouse-pic {
-  margin-left: -300vw;
 }
 
 .txt01 {

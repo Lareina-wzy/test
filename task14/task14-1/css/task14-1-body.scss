@@ -61,9 +61,18 @@ $white: #ffffff;
     }
 
     .carouse-pic {
-        width: 400vw;
+        width: 500vw;
         height: 30vw;
         overflow: hidden;
+        animation: carouse 20s infinite linear;
+
+        @keyframes carouse {
+            0%,15% {margin-left: 0;}
+            25%,40% {margin-left: -100vw;}
+            50%,65% {margin-left: -200vw;}
+            75%,90% {margin-left: -300vw;}
+            100% {margin-left: -400vw;}
+        }
 
         .pic01,
         .pic02,
@@ -127,29 +136,7 @@ $white: #ffffff;
         transform: rotate(135deg);
     }
 
-    #pic-right:checked~.carouse-pic {
-        margin-left: -100vw;
-    }
-
-    #pic-left:checked~.carouse-pic {
-        margin-left: 100vw;
-    }
-
-    #pic01:checked~.carouse-pic {
-        margin-left: 0;
-    }
-
-    #pic02:checked~.carouse-pic {
-        margin-left: -100vw;
-    }
-
-    #pic03:checked~.carouse-pic {
-        margin-left: -200vw;
-    }
-
-    #pic04:checked~.carouse-pic {
-        margin-left: -300vw;
-    }
+    
 }
 
 .txt01 {
