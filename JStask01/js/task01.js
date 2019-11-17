@@ -20,7 +20,6 @@ function change() {
         // var y = '#' + Math.random().toString(16).substr(-6);
 
         var y = '#' + ('00000' + Math.floor(Math.random() * 0x1000000).toString(16)).substr(-6);
-        console.log(y);
         divcolor.push(y);
     }
     // 取值
