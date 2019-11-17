@@ -6,15 +6,21 @@ function change() {
     clearInterval(incolor);
     incolor = setInterval(change, 1000);
     // 声明
-    divcolor = new Array();
-    num = new Array();
+    divcolor = [];
+    num = [];
     var x = Math.floor(Math.random() * 9);
     // 取色
+
     for (var i = 0; i < 3; i++) {
-        var r = Math.floor(Math.random() * 256);
-        var g = Math.floor(Math.random() * 256);
-        var b = Math.floor(Math.random() * 256);
-        var y = "rgb(" + r + "," + g + "," + b + ")";
+        // var r = Math.floor(Math.random() * 256);
+        // var g = Math.floor(Math.random() * 256);
+        // var b = Math.floor(Math.random() * 256);
+        // var y = "rgb(" + r + "," + g + "," + b + ")";
+
+        // var y = '#' + Math.random().toString(16).substr(-6);
+
+        var y = '#' + ('00000' + Math.floor(Math.random() * 0x1000000).toString(16)).substr(-6);
+        console.log(y);
         divcolor.push(y);
     }
     // 取值
@@ -28,7 +34,7 @@ function change() {
     }
     // 循环改变颜色
     for (var i = 0; i < 9; i++) {
-        document.getElementById("div" + i).style.background = "#ffa600";
+        document.getElementsByTagName("div")[i].style.background = "#ffa600";
     }
     for (var i = 0; i < 3; i++) {
         document.getElementById("div" + num[i]).style.background = divcolor[i];
@@ -41,6 +47,7 @@ document.getElementById("over").addEventListener("click", divOver);
 
 // 点击事件
 var zero = true;
+
 function divStart() {
     if (zero) {
         change();
