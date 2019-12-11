@@ -1,0 +1,113 @@
+@charset "utf-8";
+$blue: #29BDE0;
+$black: #464646;
+$lightblack: #A6A6A6;
+$lightblack2: #c7c7c7;
+$red: #F66F6F;
+$graybg: #F0F0F0;
+$grayborder: #C9C9C9;
+$white: #FFFFFF;
+$yellow: #FBB435;
+$yellowtxt: #FFC865;
+$green: rgba(26, 153, 183, .52);
+
+@mixin outline {
+    outline: none;
+    border: none;
+}
+
+@mixin flex($vert, $horz) {
+    display: flex;
+    justify-content: $vert;
+    align-items: $horz;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font($align, $size, $color) {
+    text-align: $align;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin fix($top, $left, $bottom) {
+    position: sticky;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute-l($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolute-r($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.g-header {
+    position: sticky;
+    top: 0;
+    @include flex(space-between, center);
+    @include width(100%, 44px);
+    @include font(center, 17px, $white);
+    background: $blue;
+    border-bottom: rgba(255, 255, 255, .35) solid 1px;
+
+    .line {
+        margin-left: 23px;
+        width: 12px;
+        height: 12px;
+        border-left: 2px solid $white;
+        border-bottom: 2px solid $white;
+        transform: rotate(45deg);
+    }
+
+    .close {
+        width: 20px;
+        height: 2px;
+        margin-right: 23px;
+        background: $white;
+        transform: rotate(45deg);
+    }
+
+    .close:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: $white;
+        transform: rotate(-90deg);
+    }
+}
+
+
+
+.g-footer {
+    position: fixed;
+    bottom: 0;
+    @include width(100%, 80px);
+    @include flex(center, center);
+
+
+    .select {
+        @include width(70%, 40px);
+        @include font(center, 20px, $white);
+        @include outline();
+        background: $yellow;
+    }
+
+}

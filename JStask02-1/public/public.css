@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.g-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  text-align: center;
+  font-size: 17px;
+  color: #FFFFFF;
+  background: #29BDE0;
+  border-bottom: rgba(255, 255, 255, 0.35) solid 1px;
+}
+
+.g-header .line {
+  margin-left: 23px;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(45deg);
+}
+
+.g-header .close {
+  width: 20px;
+  height: 2px;
+  margin-right: 23px;
+  background: #FFFFFF;
+  transform: rotate(45deg);
+}
+
+.g-header .close:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #FFFFFF;
+  transform: rotate(-90deg);
+}
+
+.g-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.g-footer .select {
+  width: 70%;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  background: #FBB435;
+}

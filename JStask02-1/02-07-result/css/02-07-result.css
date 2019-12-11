@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+}
+
+.g-head {
+  width: 100%;
+  height: 44px;
+  text-align: center;
+  font-size: 17px;
+  color: #FFFFFF;
+  line-height: 44px;
+  background: #29BDE0;
+  border-bottom: #FFFFFF solid 1px;
+}
+
+.g-head .home {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 26px;
+  height: 22px;
+  background: url(../../images/sprites.png) 0 0 no-repeat;
+}
+
+.g-head .warn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  border: #FFFFFF solid 1px;
+  text-align: center;
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 20px;
+}
+
+.g-main {
+  position: fixed;
+  top: 44px;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
+  background: #29BDE0;
+}
+
+.g-mainblue {
+  width: 80%;
+  margin: 0 auto;
+  background: #29BDE0;
+}
+
+.g-mainblue .picture {
+  width: 178px;
+  height: 103px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 24px;
+  color: #FFFFFF;
+  background: url(../../images/sprites.png) 0 -30px no-repeat;
+}
+
+.g-mainblue .picture .picture-txt {
+  padding-top: 65px;
+}
+
+.g-mainblue .txt01 {
+  text-align: center;
+  font-size: 17px;
+  color: #FFC865;
+}
+
+.result-box {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: justify;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+.result-box .list {
+  width: 100%;
+}
+
+.result-box .list div {
+  float: left;
+  width: 80px;
+}
+
+.result-box .list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.g-mainwhite {
+  width: 100%;
+  background: #FFFFFF;
+  padding-bottom: 100px;
+}
+
+.g-mainwhite .group {
+  padding-bottom: 10px;
+  border-bottom: #c7c7c7 solid 1px;
+}
+
+.g-mainwhite .group-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+.g-mainwhite .group-first .day {
+  text-align: left;
+  font-size: 15px;
+  color: #464646;
+}
+
+.g-mainwhite .group-first .time {
+  text-align: right;
+  font-size: 10px;
+  color: #c7c7c7;
+}
+
+.g-mainwhite .event {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 10 px;
+  text-align: justify;
+  font-size: 13px;
+  color: #A6A6A6;
+  line-height: 18px;
+}
+
+.g-footer {
+  background: rgba(41, 189, 224, 0.48);
+}
+
+.g-footer a {
+  width: 40%;
+  height: 43px;
+  margin: 0 3%;
+}
+
+.g-footer .again, .g-footer .upload {
+  width: 100%;
+  height: 43px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #F66F6F;
+  text-align: center;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.g-footer .upload {
+  background: #FBB435;
+}

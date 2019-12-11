@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02玩家配比</title>
+    <link rel="stylesheet" href="../css/02-02-player.css">
+    <link rel="stylesheet" type="text/css" href="../../public/public.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="g-header">
+        <div class="m-nav">
+            <div class="line"></div>
+        </div>
+        <div class="close"></div>
+    </div>
+    <!-- 主体 -->
+    <div class="g-main">
+        <div class="m-title">玩家配比</div>
+        <div class="m-pic">
+            <div class="pic-1">
+                <div class="pic"></div>
+                <div id="killer">杀手1人</div>
+            </div>
+            <div class="pic-2">
+                <div class="pic"></div>
+                <div id="person">平民3人</div>
+            </div>
+        </div>
+        <div class="m-choose">
+            <div class="subtract" id="subtract">
+                <div></div>
+            </div>
+            <input type="range" id="range" max="18" min="4">
+            <div class="add" id="add">
+                <div></div>
+            </div>
+        </div>
+        <div class="m-input">
+            <span>请输入玩家数量</span>
+            <input type="text" id="inputtxt" maxlength="2">
+            <span class="small">数量为4-18</span>
+        </div>
+        
+    </div>
+
+
+
+    <!-- 尾部 -->
+    <div class="g-footer">
+        <button class="select">查看身份</button>
+    </div>
+
+
+
+
+
+    <script src="../../public/public.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"> </script>
+    <script src="../js/02-02-player.js"></script>
+</body>
+
+</html>
