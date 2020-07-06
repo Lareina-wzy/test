@@ -1,0 +1,166 @@
+<script>
+   // var obj = {
+   //   a: function () {
+   //       console.log(this)
+   //       console.log(this.bar)
+   //   },
+   //   bar: 1
+   // };
+
+   // var a = obj.a;
+   // var bar = 2;
+
+   // obj.a() // 1
+   // a() // 2
+
+
+
+
+
+   // 函数调用
+
+   // function a() {
+   //    console.log(this);
+   // }
+   // a();
+
+
+
+   // 对象方法的调用
+
+   // var obj = {
+   //    x: 1,
+   //    b() {
+   //       console.log(this);
+   //       console.log(this.x);
+   //    }
+   // }
+   // obj.b()
+
+
+   // function b() {
+   //    console.log(this);
+   //    console.log(this.x);
+   // }
+   // var obj = {};
+   // obj.x = 1;
+   // obj.m = b;
+   // obj.m(); 
+
+
+
+
+   // // 嵌套函数
+   // var x = 1;
+   // var obj = {
+   //     x: 2,
+   //     f: function(){
+   //         console.log(this.x);   // this 指向obj
+   //                // 输出 2
+   //         var a = function(){ console.log(this.x); }
+   //         a();   //a中this被指定为window，所以输出 1
+   //     }
+   // };
+
+   // obj.f();  // obj.f.call(obj)
+   // // 输出2  1
+
+
+
+
+
+   // 构造函数
+
+   // var x = 2;
+   // function c() {
+   //    this.x = 1;
+   //    console.log(this);
+   // }
+
+   // var obj = new c();
+   // console.log(obj.x);
+   // console.log(x);
+
+
+   // function d(number) {
+   //    this.x = number;
+   //    console.log(this);
+   // }
+
+   // var obj = new d(1);
+   // var obj2 = new d(2);
+
+
+
+
+   // 常见问题
+   // var o = {
+   //    a: 10,
+   //    b: {
+   //       a:12,
+   //       fn: function () {
+   //          console.log(this);
+   //          console.log(this.a); //undefined
+   //       }
+   //    }
+   // }
+   // o.b.fn();
+
+
+
+
+
+
+
+
+   // 编码实战
+   // var x = 10;
+   // var obj = {
+   //     x: 20,
+   //     f: function(){ console.log(this.x); }
+   // };
+
+   // obj.f(); 	// ==> 20
+
+   // var fn = obj.f;
+   // fn();	//==> 10
+
+   // var obj2 = {
+   //     x: 30,
+   //     f: obj.f
+   // }
+   // obj2.f(); 	//==> 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // var a = {
+   //    x: "aaaa"
+   // };
+
+   // function fn() {
+   //    this.m = 1;
+   //    console.log(this);
+   //    console.log(this.m);
+   //    return a;
+   //    // return {};
+   //    // return function () {};
+   //    // return 5;
+   //    // return undefined;
+   //    // return null;
+   // }
+   // var b = new fn;
+   // console.log("b=", b);
+   // console.log("b.m=", b.m);
+   // console.log("a=", a);
+   // console.log("a.m=", a.m);
+</script>

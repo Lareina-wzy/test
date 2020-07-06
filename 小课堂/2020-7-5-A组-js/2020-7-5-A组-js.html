@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ?
+            'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' :
+            'https://ptteng.github.io/PPT/css/reveal/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <!-- <img src="https://ptteng.github.io/PPT/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo"> -->
+    <map name="pttmap">
+        <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank" />
+    </map>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h4>
+                    简述JS中this的指向</h4>
+                <h4>分享人：王卓彦</h4>
+            </section>
+            <section>
+                <p>目录</p>
+                <p>1.背景介绍</p>
+                <p>2.知识解剖</p>
+                <p>3.常见问题</p>
+                <p>4.解决方案</p>
+                <p>5.编码实战</p>
+                <p>6.扩展思考</p>
+                <p>7.参考文献</p>
+                <p>8.更多讨论</p>
+                <p>9.鸣谢</p>
+            </section>
+            <!-- <section>
+                <h3>1.背景介绍</h3>
+            </section> -->
+
+            <!-- <section style="font-family: 'Times New Roman'; text-transform:none;"> -->
+            <!-- <h4 style="font-family: 'Times New Roman'; text-transform:none;">什么是Ajax？</h4> -->
+            <!-- <section> -->
+            <!-- <p style="text-align: left;">
+                        <h4>为什么要使用SASS</h4>
+                        DOM（文档对象模型）是针对HTML 和XML 文档的一个API（应用程序编程接口）。 DOM描绘了一个层次化的节点树，允许开发人员添加、移除和修改页面的某一部分。 -->
+
+            <!-- </p> -->
+
+            <!-- </section> -->
+            <!-- <section>
+                    <p style="text-align: left;">
+                        <h4>为什么要使用SASS</h4>
+
+                        3.什么是Display：none<br>
+                        属性规定元素应该生成的框的类型。值为none，表示元素不会被显示, 位置也不再被占据
+                        添加了这个属性会将元素与其子元素从普通文档流中移除。这时文档的渲染就像元素从来没有存在过一样，也就是说它所占据的空间被折叠了。元素的内容也会被屏幕阅读所忽略。隐藏起来
+                        <br>4.什么是Visibility:hidden
+                        visibility 属性规定元素是否可见。值为hidden，表示元素不可见。但是会占据原有位置。
+                    </p>
+
+                </section> -->
+            <!-- <section>
+                </section> -->
+            <!-- </section>
+            <section>
+                <h3>.知识剖析</h3>
+            </section>
+
+            <section> -->
+            <section>
+                <h2>1.什么是this？</h2>
+                <p style="text-align: left;">
+
+                    this是 JavaScript 语言的一个关键字。<br>
+                    它是函数运行时，在函数体内部自动生成的一个对象，只能在函数体内部使用。<br>
+                    函数的不同使用场合，this有不同的值。总的来说，this就是函数运行时所在的环境对象。<br>
+                    <br>
+                </p>
+            </section>
+            <section>
+                <h2>分几种情况讨论this指向</h2>
+                <p>
+
+                    <br>
+
+                    1.纯粹的函数调用的this<br>
+
+                    2.作为对象方法的调用的this<br>
+
+                    3.嵌套函数内的this<br>
+
+                    4.构造函数内的this<br>
+
+
+
+
+
+                </p>
+            </section>
+            <section>
+                <!-- <h2>常见的DOM操作有哪些？</h2> -->
+                <p style="text-align: left;">
+
+                    1.纯粹的函数调用的this<br>
+                    全局性调用函数，this指向window(严格模式指向undefined)。<br>
+
+                </p>
+            </section>
+            <section>
+                <p style="text-align: left;">
+
+                    2.作为对象方法的调用的this<br>
+                    有被对象调用，this指向他上一级对象(即使被多个对象包裹)
+
+
+                </p>
+            </section>
+            <section>
+                <!-- <h2>作用域链的介绍</h2> -->
+                <p style="text-align: left;">
+                    3.嵌套函数内的this<br>
+                    如对象内函数中的函数，它即使是被对象调用，它指向的还是window/undefined(解决把this赋给函数内变量，定义时就确定
+
+
+
+                </p>
+            </section>
+            <section>
+                <!-- <h2>作用域链的介绍</h2> -->
+                <p style="text-align: left">
+
+                    4.构造函数内的this<br>
+                    所谓构造函数，就是通过这个函数，可以生成一个新对象。这时，this就指这个新对象。
+
+
+                </p>
+            </section>
+            <!-- 切换到下面 -->
+            <!-- <section style="font-family: 'Times New Roman'; text-transform:none;">
+                    <p style="text-align: left;">
+                        一个完整的请求由四部分组成
+                        <br>接下来，我们就要监听请求成功的状态变化了
+                        <br>onreadystatechange：用来监听readyState的变化的
+                        <br>readyState：表示当前请求的后台的状态
+                        <br>status：表示处理的结果
+                        <br>其中readyState：表示当前请求的后台的状态
+                    </p>
+                </section>
+                <section style="font-family: 'Times New Roman'; text-transform:none;">
+                    <p style="text-align: left;">
+                        0：请求未初始化(还没有调用open())
+                        <br>1：请求已经建立，但是还没有发送(还没有调用send())
+                        <br>2：请求已经发送，正在处理中
+                    </p>
+                </section>
+                <section style="font-family: 'Times New Roman'; text-transform:none;">
+                    <p style="text-align: left;">
+                        3：请求正在处理中，通常响应中已经有部分数据可以用了
+                        <br>4：响应已经完成，可以获取并使用服务器的响应了
+                        <br>而status：表示处理的结果(状态码)
+                        <br>1XX，表示收到请求正在处理中
+                        <br>status == 200 是表示处理的结果是OK的
+                        <br>状态码:200到300是指服务端正常返回
+                    </p>
+                </section>
+                <section style="font-family: 'Times New Roman'; text-transform:none;">
+                    <p style="text-align: left;">
+                        304:如果网页自请求者上次请求后再也没有更改过，应将服务器配置为返回此响应，进而节省带宽和开销
+                        <br>404:找不到对象（404 not found)
+                        <br>503:服务器超时
+                        <br>设置请求参数
+                        <br>xhr对象接受三个参数 
+                        <br>1：表示请求类型
+                        <br>2：表示请求的网址
+                        <br>3：表示是否异步
+                        <br>get/post/put/delete
+                        <br>Get和post方法的区别：
+                        <br>get是获取数据，get的send方法的参数可以是null或者空，对发送信息有限制，一般在2000个字符，一般是用来查询（幂等） 
+                        <br>post可以发送数据，但是在使用post方法发送数据，
+                    </p>
+                </section>
+                <section style="font-family: 'Times New Roman'; text-transform:none;">
+                    <p style="text-align: left;">
+                        <br>需要使用setRequestHeader()来添加HTTP头，同时，post的send()方法需要写入要发送的数据的值, 
+                        <br>一般用于修改服务器上的资源，对信息数量无限制，也更安全
+                    </p>
+                </section>
+            </section> -->
+            <section>
+                <h3>3.编码实战</h3>
+                <!-- <br> <a href="BFC-high.html" target="blank"></a> -->
+
+
+            </section>
+
+            <section style="font-family: 'Times New Roman'; text-transform:none;">
+
+                <h3>4.常见问题</h3>
+
+            </section>
+            <section>
+                <p style="text-align: left;">
+
+                    当函数被多个对象包裹时this的指向，如以下代码：
+                </p>
+            </section>
+
+            <!-- <section>
+                    <p style="text-align: left;">
+                        DOM 和 JavaScript什么关系？<br>
+                        Javascript可以通过DOM直接访问和操作网页文档的内容，一开始，DOM是为方便Javascript操作设计的API。但其实发展到后来，他们是两个独立的个体。
+                        而且Javascript不是唯一可以使用DOM的编程语言，比如python也可以访问DOM。所以DOM不是提供给Javascript的API，也不是Javascript里的API。
+                        但JavaScript可以通过DOM访问和操作HTML和XML文档内容。
+
+                    </p>
+                </section>
+
+                <section>
+                    <p style="text-align: left;">
+                        书写细节<br>
+                        只有查找ID时element不加s ，对新人来说要是不注意细节很可能会书写错误，导致一时半会儿找不到错误所在 getElementById getElementsByClassName
+                    </p>
+                </section>
+                <section>
+                    <p style="text-align: left;">
+                        如何获取相邻的节点？<br>
+                        neborNode.previousSibling :获取已知节点的相邻的上一个节点 nerbourNode.nextSlbling: 获取已知节点的下一个节点
+
+                    </p>
+                </section>
+                <section>
+                    <p style="text-align: left;">
+                        可以复制节点么？<br>
+                        cloneNode(true | false);复制某个节点 参数：是否复制原节点的所有属性
+
+                    </p>
+                </section>
+ -->
+
+
+            <section style="text-align: left;">
+                <h3>4.解决方案</h3>
+                <p>
+                    情况1：如果一个函数中有this，但是它没有被上一级的对象所调用，那么this指向的就是window（js的严格版中this指向的不是window）。
+                </p>
+                <p>
+                    情况2：如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象。
+                </p>
+                <p>
+                    情况3：如果一个函数中有this，这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象
+                </p>
+            </section>
+            <!-- <section class="" style="top: 275px; display: none;" aria-hidden="true">
+              
+                <h6>
+                    <a href="https://ptteng.github.io/WEB/demo/angular%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3%E6%98%AF%E4%BB%80%E4%B9%88/demo2.html"
+                        target="_blank">demo</a>
+                </h6>
+            </section> -->
+            <!-- 
+                <section>
+                    <h3>5.编码实战</h3>
+                    <p>正文已展示</p>
+                </section> -->
+
+            <section>
+                <h3>6.扩展思考</h3>
+                <h3>手动 改变函数中的this指向。常用call（）、apply（）、bind（）方法。</h3>
+
+            </section>
+            <!-- <section>
+                        <h3>DOM有什么优点和缺点？</h3>
+                        <p>DOM的优势主要表现在：易用性强，使用DOM时，将把所有的XML文档信息都存于内存中，并且遍历简单，支持XPath，增强了易用性。 DOM的缺点主要表现在：效率低，
+                            解析速度慢，内存占用量过高，对于大文件来说几乎不可能使用。另外效率低还表现在大量的消耗时间，因为使用DOM进行解析时，
+                            将为文档的每个element、attribute、processing-instrUCtion和comment都创建一个对象，这样在DOM机制中所运用的大量对象的创建和销毁无疑会影响其效率。</p>
+                    </section> -->
+
+
+            <section>
+                <h3>7.参考文献</h3>
+            </section>
+            <section style="text-align:left">
+                <h6>
+                    1.阮一峰http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html
+                    <br>
+                    2.hellochenlu https://blog.csdn.net/hellochenlu/article/details/52244276
+                    <br>
+                    3.追梦子 https://www.cnblogs.com/pssp/p/5216085.html
+                </h6>
+
+            </section>
+
+
+
+
+
+            <section>
+                <h4>鸣谢</h4>
+                <p>感谢大家观看</p>
+                <p>
+                    <small style="vertical-align: middle"></small>
+                </p>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+    <script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+    <script>
+        // 以下为常见配置属性的默认值
+        // {
+        // 	controls: true, // 是否在右下角展示控制条
+        // 	progress: true, // 是否显示演示的进度条
+        // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+        // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+        // 	keyboard: true, // 是否启用键盘快捷键来导航
+        // 	overview: true, //                                                                                                                                                                                                                                                                                                      是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+        // 	center: true, // 是否将幻灯片垂直居中
+        // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+        // 	loop: false, // 是否循环演示
+        // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+        // 	fragments: true, // 全局开启和关闭碎片。
+        // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+        // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+        // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+        // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+        // }
+        // 初始化幻灯片
+        Reveal.initialize({
+            //        history: true,
+            transition: 'default',
+            transitionSpeed: 'slow',
+            dependencies: [{
+                    src: '../plugin/markdown/marked.js'
+                },
+                {
+                    src: '../plugin/markdown/markdown.js'
+                },
+                {
+                    src: '../plugin/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: '../plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }
+            ]
+        });
+        //    原始类型对象直接赋值不会相互影响
+        //    var a = 1;
+        //
+        //    var b = a;
+        //    b = 10;
+        //    console.log(a); // 1
+        ////
+        //    var a = 'hello';
+        //    var b = a;
+        //    b = 'world';
+        //    console.log(a); // hello
+        //
+        //    var a = true;
+        //    var b = a;
+        //    b = false;
+        //    console.log(a);
+        //数组浅复制
+        //    var a = ['隔壁老王','冠希哥', '宋经理' //定义一个名为a的属猪，里面有3个值，
+        //    ];
+        //    var b = a;   //定义一个变量b，把a赋值给他，这样比、b和a一样了
+        //    b[2] = '冲冲老师'; //然后把b的第三个值等于冲冲老师
+        //    console.log(a)//那么现在打印a 是什么结果呢
+        //
+        //    var arr = ["One","Two","Three"];   //数组的深复制，slice方法
+        //    var arrtoo = arr.slice(1);
+        //    arrtoo[2] = "set Map";
+        //    console.log(arr);//One,Two,Three
+        //    console.log(arrtoo);//One,set Map,Three
+        //
+        //    var arr1 = ["One","Two","Three"]; //数组的深复制，concat 方法
+        //    var arrtooo = arr1.concat(111111);
+        //    arrtooo[1] = "set Map To";
+        //    console.log(arr1);//One,Two,Three
+        //    console.log(arrtooo);//One,set Map To,Three
+        //
+        //    var b=[1,2,3,4,5];   //concat的链接
+        //    var c=[6,7,8,9];
+        //    var d =[4,4,22]
+        //    console.log(b.concat(c,d))
+        var a = {
+            name: 'yy',
+            age: 26
+        }; //对象的浅拷贝哦
+        var b = new Object();
+        b.name = a.name;
+        b.age = a.age;
+        b.name = 'xx';
+        console.log(a); //Object { name="yy", age=26}
+        console.log(b); //Object { name="xx", age=26}
+        var d = { //对象的浅拷贝哦 第一种
+            name: 'd',
+            oc: {
+                age: 32
+            },
+            oad: {
+                adds: {
+                    bb: 12
+                }
+            }
+        };
+        var deepCopy = function (source) {
+            var result = {};
+            for (var key in source) {
+                result[key] = typeof source[key] === 'object' ? deepCopy(source[key]) : source[key]
+            }
+            return result
+        };
+        var c = deepCopy(d);
+        c.name = 'c';
+        c.oc = {
+            age: 49
+        };
+        console.log(c);
+        console.log(d);
+        //    var person = {    //第二种深拷贝
+        //        name: 'aa',
+        //        friends: ['da', 'dsa', 'gf']
+        //    };
+        //
+        //    var aPerson = Object.create(person, {
+        ////        name: {
+        ////            value: "gee"
+        ////        }
+        //    });
+        //
+        //    console.log(person.name);
+        //    console.log(aPerson.friends)
+        var Chinese = {
+            nation: '中国'
+        }
+        var Doctor = {
+            career: '医生'
+        }
+
+        function extendCopy(p) {
+            var c = {};
+            for (var i in p) {
+                c[i] = p[i];
+            }
+            c.uber = p;
+            return c;
+        }
+        var Doctor = extendCopy(Chinese);
+        Doctor.career = '医生';
+        console.log(Doctor); // 中国
+        Chinese.birthPlaces = ['北京', '上海', '香港'];
+        var Doctor = extendCopy(Chinese);
+        Doctor.birthPlaces.push('厦门');
+    </script>
+</body>
+
+</html>
